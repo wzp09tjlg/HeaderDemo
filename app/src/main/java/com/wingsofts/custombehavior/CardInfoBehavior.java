@@ -4,6 +4,7 @@ import android.content.Context;
 import android.support.design.widget.CoordinatorLayout;
 import android.support.v7.widget.CardView;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.view.View;
 import android.view.animation.AccelerateInterpolator;
 import android.widget.LinearLayout;
@@ -37,7 +38,10 @@ public class CardInfoBehavior extends CoordinatorLayout.Behavior<CardView> {
         }else{
             child.setAlpha(accelerateInterpolator.getInterpolation(percent));
         }
-        return true;//这里需不需要返回true 如果返回true的法 是不是把事件消耗掉了
-        // 导致其他的behavior不能接收到这个事件呢 。待验证一下？？？
+
+        Log.e("wzp","percent:" + percent + "\n"
+                +" accelerateInterpolator.getInterpolation(percent) "
+                + accelerateInterpolator.getInterpolation(percent));
+        return true;
     }
 }

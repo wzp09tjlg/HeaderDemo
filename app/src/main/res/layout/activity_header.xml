@@ -88,6 +88,7 @@
         android:scaleType="centerCrop"
         android:src="@drawable/avator"
         android:visibility="visible"
+        android:elevation="11dp"
         app:layout_anchor="@id/layout_logo_anchor"
         app:layout_anchorGravity="center_horizontal"
         app:layout_behavior=".LogoBehavior" />
