@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<com.wingsofts.custombehavior.SodaCoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#00ffc300"
+    app:zoomId="@+id/img_bg"
+    app:maxZoom="450dp"
     tools:ignore="RtlHardcoded">
 
     <android.support.design.widget.AppBarLayout
@@ -18,6 +20,7 @@
             app:layout_scrollFlags="scroll|exitUntilCollapsed|snap">
             <!-- 背景图 -->
             <ImageView
+                android:id="@+id/img_bg"
                 android:layout_width="match_parent"
                 android:layout_height="300dp"
                 android:scaleType="centerCrop"
@@ -47,7 +50,7 @@
         <!--scolloerview的直接子类就是一个线性布局-->
         <include layout="@layout/layout_main" />
     </android.support.v4.widget.NestedScrollView>
-
+<!--
     <android.support.v7.widget.CardView
         android:id="@+id/card_info"
         android:layout_width="match_parent"
@@ -58,14 +61,14 @@
         app:cardElevation="9dp"
         app:contentPadding="16dp"
         app:layout_behavior="com.wingsofts.custombehavior.CardInfoBehavior">
-
         <TextView
             android:id="@+id/tv_name"
             android:layout_width="80dp"
             android:layout_height="60dp"
             android:layout_gravity="center"
             android:text="this is a test" />
-    </android.support.v7.widget.CardView>
+    </android.support.v7.widget.CardView>-->
+<!--
 
     <ImageView
         android:id="@+id/img_logo"
@@ -76,7 +79,7 @@
         android:src="@drawable/avator"
         app:layout_anchor="@id/frameLayout"
         app:layout_anchorGravity="center_horizontal"
-
         app:layout_behavior="com.wingsofts.custombehavior.LogoBehavior" />
+-->
 
-</android.support.design.widget.CoordinatorLayout>
+</com.wingsofts.custombehavior.SodaCoordinatorLayout>
